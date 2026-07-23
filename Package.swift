@@ -13,39 +13,27 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
+        .package(url: "https://github.com/PubMatic/OpenWrapSDK-Swift-Package.git", exact: "5.1.1"),
     ],
     targets: [
         .target(
             name: "REVUPMediaMaxAdapterPubMaticTarget",
             dependencies: [
                 .target(name: "REVUPMediaMaxAdapterPubMatic"),
-                .target(name: "REVUPMediaMaxAdapterPubMaticMediationAdapter"),
-                .target(name: "OpenWrapSDK"),
-                .target(name: "OMSDK_Pubmatic"),
-                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .target(name: "AppLovinMediationPubMaticAdapter"),
+                .product(name: "OpenWrapSDK", package: "OpenWrapSDK-Swift-Package"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "REVUPMediaMaxAdapterPubMatic",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/REVUPMediaMaxAdapterPubMatic.zip",
-            checksum: "88808c2681313380e2d6fe970f5228fdb0c1a2939c9552b35684fef7b6b64e2f"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/REVUPMediaMaxAdapterPubMatic.zip",
+            checksum: "59ba29938442ec371ac817faa8a129352cab2efab9edfb7001a7bb558961019b"
         ),
         .binaryTarget(
-            name: "REVUPMediaMaxAdapterPubMaticMediationAdapter",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/AppLovinMediationPubMaticAdapter.xcframework.zip",
-            checksum: "99e28e74f0194399241d88f3807d6aa8ea7a8343424f88eb8e8bb661d137ba6a"
-        ),
-        .binaryTarget(
-            name: "OpenWrapSDK",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/OpenWrapSDK.xcframework.zip",
-            checksum: "71029ead36a01482354fd47a824755fc5967d7dc3a203bf30d1093b58b056059"
-        ),
-        .binaryTarget(
-            name: "OMSDK_Pubmatic",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/OMSDK_Pubmatic.xcframework.zip",
-            checksum: "1e7bc27588037ef3d4de478c0dc9e7231eefbeda5e51e4d5e1fa8d2d084dfefd"
-        ),
+            name: "AppLovinMediationPubMaticAdapter",
+            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/pubmatic-adapter/AppLovinMediationPubMaticAdapter-5.1.1.0.zip",
+            checksum: "c722f785f79eee5c133fc14785865e274a549cb8dad90e8b3df474e650b8a07b"
+        )
     ]
 )

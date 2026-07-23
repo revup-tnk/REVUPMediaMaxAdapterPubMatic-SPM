@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "applovin-max-swift-package",
+      "identity" : "openwrapsdk-swift-package",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "location" : "https://github.com/PubMatic/OpenWrapSDK-Swift-Package.git",
       "state" : {
-        "revision" : "b5acf713209298059bb2f09b22d84d523454bc7b",
-        "version" : "13.5.1"
+        "revision" : "580ccd7d8f966a2bfd2614a88a44bc1a13419b1f",
+        "version" : "5.1.1"
       }
     }
   ],
